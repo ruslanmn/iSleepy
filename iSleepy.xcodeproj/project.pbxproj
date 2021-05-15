@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */; };
+		4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA226508367004AE291 /* CategoryDataSource.swift */; };
 		4EE5EF032650117B0013A502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF022650117B0013A502 /* AppDelegate.swift */; };
 		4EE5EF052650117B0013A502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF042650117B0013A502 /* SceneDelegate.swift */; };
-		4EE5EF072650117B0013A502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF062650117B0013A502 /* ViewController.swift */; };
+		4EE5EF072650117B0013A502 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF062650117B0013A502 /* CategoryListCell.swift */; };
 		4EE5EF0A2650117B0013A502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5EF082650117B0013A502 /* Main.storyboard */; };
 		4EE5EF0C2650117C0013A502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5EF0B2650117C0013A502 /* Assets.xcassets */; };
 		4EE5EF0F2650117C0013A502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE5EF0D2650117C0013A502 /* LaunchScreen.storyboard */; };
 		4EE5EF1A2650117D0013A502 /* iSleepyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF192650117D0013A502 /* iSleepyTests.swift */; };
 		4EE5EF252650117D0013A502 /* iSleepyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF242650117D0013A502 /* iSleepyUITests.swift */; };
+		4EE5EF33265011E20013A502 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF32265011E20013A502 /* DataLoader.swift */; };
+		4EE5EF36265012540013A502 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE5EF35265012540013A502 /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLIstViewController.swift; sourceTree = "<group>"; };
+		4E068AA226508367004AE291 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		4EE5EEFF2650117B0013A502 /* iSleepy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSleepy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE5EF022650117B0013A502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE5EF042650117B0013A502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EE5EF062650117B0013A502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EE5EF062650117B0013A502 /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
 		4EE5EF092650117B0013A502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EE5EF0B2650117C0013A502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EE5EF0E2650117C0013A502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 		4EE5EF202650117D0013A502 /* iSleepyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSleepyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE5EF242650117D0013A502 /* iSleepyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSleepyUITests.swift; sourceTree = "<group>"; };
 		4EE5EF262650117D0013A502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE5EF32265011E20013A502 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE5EF36265012540013A502 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				4EE5EF022650117B0013A502 /* AppDelegate.swift */,
+				4EE5EF32265011E20013A502 /* DataLoader.swift */,
 				4EE5EF042650117B0013A502 /* SceneDelegate.swift */,
-				4EE5EF062650117B0013A502 /* ViewController.swift */,
+				4E068AA226508367004AE291 /* CategoryDataSource.swift */,
+				4EE5EF062650117B0013A502 /* CategoryListCell.swift */,
 				4EE5EF082650117B0013A502 /* Main.storyboard */,
+				4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */,
 				4EE5EF0B2650117C0013A502 /* Assets.xcassets */,
 				4EE5EF0D2650117C0013A502 /* LaunchScreen.storyboard */,
 				4EE5EF102650117C0013A502 /* Info.plist */,
@@ -144,6 +155,9 @@
 			dependencies = (
 			);
 			name = iSleepy;
+			packageProductDependencies = (
+				4EE5EF35265012540013A502 /* SwiftSoup */,
+			);
 			productName = iSleepy;
 			productReference = 4EE5EEFF2650117B0013A502 /* iSleepy.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 4EE5EEF62650117B0013A502;
+			packageReferences = (
+				4EE5EF34265012540013A502 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 4EE5EF002650117B0013A502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE5EF072650117B0013A502 /* ViewController.swift in Sources */,
+				4EE5EF33265011E20013A502 /* DataLoader.swift in Sources */,
+				4EE5EF072650117B0013A502 /* CategoryListCell.swift in Sources */,
+				4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */,
+				4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */,
 				4EE5EF032650117B0013A502 /* AppDelegate.swift in Sources */,
 				4EE5EF052650117B0013A502 /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EE5EF34265012540013A502 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EE5EF35265012540013A502 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EE5EF34265012540013A502 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EE5EEF72650117B0013A502 /* Project object */;
 }
