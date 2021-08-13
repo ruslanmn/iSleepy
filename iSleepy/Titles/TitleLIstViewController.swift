@@ -45,3 +45,18 @@ class TitlesListViewController: UITableViewController {
        return cell
     }
 }
+
+
+extension TitlesListViewController {
+    static let titleImagesSegue = "TitleImagesSegue"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Self.titleImagesSegue,
+           let dest = segue.destination as? ImageViewController,
+           let cell = sender as? UITableViewCell,
+           let index = tableView.indexPath(for: cell) {
+            let title = titleDataSource.titles[index.row]
+            dest.titleOpt = title
+        }
+    }
+}

@@ -11,19 +11,6 @@ class CategoryListViewController: UITableViewController {
     
     let categoryDataSource: CategoryDataSource = CategoryDataSource()
     
-    static let titleSegueIdentifier = "TitleDetailSegue"
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Self.titleSegueIdentifier,
-           let dest = segue.destination as? TitlesListViewController,
-           let cell = sender as? UITableViewCell,
-           let index = tableView.indexPath(for: cell) {
-            let category = categoryDataSource.categories[index.row]
-            dest.categoryOpt = category.name
-        }
-    }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryDataSource.load()
@@ -50,5 +37,19 @@ class CategoryListViewController: UITableViewController {
         cell.textLabel!.text = categoryDataSource.categories[indexPath.item].name
            
        return cell
+    }
+}
+
+extension CategoryListViewController {
+    static let categoryTitlesSegue = "CategoryTitlesSegue"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Self.categoryTitlesSegue,
+           let dest = segue.destination as? TitlesListViewController,
+           let cell = sender as? UITableViewCell,
+           let index = tableView.indexPath(for: cell) {
+            let category = categoryDataSource.categories[index.row]
+            dest.categoryOpt = category.name
+        }
     }
 }
