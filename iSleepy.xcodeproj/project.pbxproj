@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */; };
 		4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA226508367004AE291 /* CategoryDataSource.swift */; };
+		4EA5880E265BEAD90040EBC0 /* TitleLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5880D265BEAD90040EBC0 /* TitleLIstViewController.swift */; };
+		4EA58810265BEB230040EBC0 /* TitleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5880F265BEB230040EBC0 /* TitleDataSource.swift */; };
 		4EE5EF032650117B0013A502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF022650117B0013A502 /* AppDelegate.swift */; };
 		4EE5EF052650117B0013A502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF042650117B0013A502 /* SceneDelegate.swift */; };
 		4EE5EF072650117B0013A502 /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF062650117B0013A502 /* CategoryListCell.swift */; };
@@ -41,6 +43,9 @@
 /* Begin PBXFileReference section */
 		4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLIstViewController.swift; sourceTree = "<group>"; };
 		4E068AA226508367004AE291 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
+		4EA5880C265BD2050040EBC0 /* TitlesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesListCell.swift; sourceTree = "<group>"; };
+		4EA5880D265BEAD90040EBC0 /* TitleLIstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLIstViewController.swift; sourceTree = "<group>"; };
+		4EA5880F265BEB230040EBC0 /* TitleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleDataSource.swift; sourceTree = "<group>"; };
 		4EE5EEFF2650117B0013A502 /* iSleepy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSleepy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE5EF022650117B0013A502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE5EF042650117B0013A502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +89,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA5880A265BCB0D0040EBC0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5EF062650117B0013A502 /* CategoryListCell.swift */,
+				4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */,
+				4E068AA226508367004AE291 /* CategoryDataSource.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		4EA5880B265BD1EB0040EBC0 /* Titles */ = {
+			isa = PBXGroup;
+			children = (
+				4EA5880C265BD2050040EBC0 /* TitlesListCell.swift */,
+				4EA5880F265BEB230040EBC0 /* TitleDataSource.swift */,
+				4EA5880D265BEAD90040EBC0 /* TitleLIstViewController.swift */,
+			);
+			path = Titles;
+			sourceTree = "<group>";
+		};
 		4EE5EEF62650117B0013A502 = {
 			isa = PBXGroup;
 			children = (
@@ -107,13 +132,12 @@
 		4EE5EF012650117B0013A502 /* iSleepy */ = {
 			isa = PBXGroup;
 			children = (
+				4EA5880B265BD1EB0040EBC0 /* Titles */,
+				4EA5880A265BCB0D0040EBC0 /* Categories */,
 				4EE5EF022650117B0013A502 /* AppDelegate.swift */,
 				4EE5EF32265011E20013A502 /* DataLoader.swift */,
 				4EE5EF042650117B0013A502 /* SceneDelegate.swift */,
-				4E068AA226508367004AE291 /* CategoryDataSource.swift */,
-				4EE5EF062650117B0013A502 /* CategoryListCell.swift */,
 				4EE5EF082650117B0013A502 /* Main.storyboard */,
-				4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */,
 				4EE5EF0B2650117C0013A502 /* Assets.xcassets */,
 				4EE5EF0D2650117C0013A502 /* LaunchScreen.storyboard */,
 				4EE5EF102650117C0013A502 /* Info.plist */,
@@ -279,6 +303,8 @@
 				4EE5EF072650117B0013A502 /* CategoryListCell.swift in Sources */,
 				4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */,
 				4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */,
+				4EA5880E265BEAD90040EBC0 /* TitleLIstViewController.swift in Sources */,
+				4EA58810265BEB230040EBC0 /* TitleDataSource.swift in Sources */,
 				4EE5EF032650117B0013A502 /* AppDelegate.swift in Sources */,
 				4EE5EF052650117B0013A502 /* SceneDelegate.swift in Sources */,
 			);

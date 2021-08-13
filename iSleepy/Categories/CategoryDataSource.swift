@@ -10,23 +10,21 @@ import SwiftSoup
 
 class CategoryDataSource {
     
-    private var categories: [Category]
+    private var _categories: [Category]
+    public var categories: [Category] {
+        get { return _categories }
+    }
     
     init() {
-        categories = []
-        load()
+        _categories = []
     }
     
     func load() {
         do {
-            categories = try CategoryDataSource.loadCategories()
+            _categories = try CategoryDataSource.loadCategories()
         } catch {
-            categories = []
+            _categories = []
         }
-    }
-    
-    func getCategories() -> [Category] {
-        return categories
     }
 }
 

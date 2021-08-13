@@ -7,33 +7,40 @@
 
 import UIKit
 
-class CategoryListViewController: UITableViewController {
+class TitlesListViewController: UITableViewController {
     
-    let categoryDataSource: CategoryDataSource = CategoryDataSource()
+    let titleDataSource: TitleDataSource = TitleDataSource()
+    
+    public var categoryOpt: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let category = categoryOpt {
+            titleDataSource.load(category: category)
+        }
         refreshControl!.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     }
     
     @objc func refresh(_ sender: AnyObject) {
-        categoryDataSource.load()
+        if let category = categoryOpt {
+            titleDataSource.load(category: category)
+        }
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryDataSource.getCategories().count
+        return titleDataSource.titles.count
     }
 
     // Provide a cell object for each row.
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        // Fetch a cell of the appropriate type.
-       let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TitleListCell", for: indexPath)
        
        // Configure the cell’s contents.
-        cell.textLabel!.text = categoryDataSource.getCategories()[indexPath.item].name
+        cell.textLabel!.text = titleDataSource.titles[indexPath.item]
            
        return cell
     }
