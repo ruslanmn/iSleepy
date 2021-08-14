@@ -40,7 +40,7 @@ class TitlesListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TitleListCell", for: indexPath)
        
        // Configure the cell’s contents.
-        cell.textLabel!.text = titleDataSource.titles[indexPath.item]
+        cell.textLabel!.text = titleDataSource.titles[indexPath.item].name
            
        return cell
     }

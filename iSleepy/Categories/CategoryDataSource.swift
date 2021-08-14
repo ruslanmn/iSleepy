@@ -21,7 +21,7 @@ class CategoryDataSource {
     
     func load() {
         do {
-            _categories = try CategoryDataSource.loadCategories()
+            _categories = try Self.loadCategories()
         } catch {
             _categories = []
         }
@@ -35,21 +35,21 @@ extension CategoryDataSource {
     }
 
     static func loadCategories() throws -> [Category] {
-        let url = URL(string: HOST + "/category.php")!
+        let url = URL(string: "https://\(HOST)/category.php")!
         let html = try String(contentsOf: url)
-        let doc = try SwiftSoup.parse(html, HOST)
+        let doc = try SwiftSoup.parse(html)
         
         let categoryElements = try doc.select("a.mr-3")
         let sizeElements = try doc.select("span.text-muted")
         
         let categoryNames = try categoryElements.map { try $0.text() }
-        let categorySizes = try sizeElements.map { try toInt($0.text()) }
+        let categorySizes = try sizeElements.map { try intWithCommaToIntValue($0.text()) }
 
         let categories = zip(categoryNames, categorySizes).map { Category(name: $0, size: $1) }
         return categories
     }
 
-    static func toInt(_ val: String) -> Int {
+    static func intWithCommaToIntValue(_ val: String) -> Int {
         var mutableVal = String(val)
         mutableVal.removeAll(where: { $0 == "," })
         return Int(mutableVal) ?? -1

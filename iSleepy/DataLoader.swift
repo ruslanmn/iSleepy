@@ -8,4 +8,4 @@
 import Foundation
 import SwiftSoup
 
-let HOST = "https://sleepycomics.com"
+let HOST = "sleepycomics.com"
