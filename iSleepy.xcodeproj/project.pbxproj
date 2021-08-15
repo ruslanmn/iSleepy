@@ -10,6 +10,7 @@
 		4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */; };
 		4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E068AA226508367004AE291 /* CategoryDataSource.swift */; };
 		4E40AD4026C8604800A162EB /* ImageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E40AD3F26C8604800A162EB /* ImageDataSource.swift */; };
+		4E8995E026C9D01D00975D8F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8995DF26C9D01D00975D8F /* ImageViewController.swift */; };
 		4EA5880E265BEAD90040EBC0 /* TitleLIstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5880D265BEAD90040EBC0 /* TitleLIstViewController.swift */; };
 		4EA58810265BEB230040EBC0 /* TitleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5880F265BEB230040EBC0 /* TitleDataSource.swift */; };
 		4EE5EF032650117B0013A502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF022650117B0013A502 /* AppDelegate.swift */; };
@@ -21,7 +22,7 @@
 		4EE5EF252650117D0013A502 /* iSleepyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF242650117D0013A502 /* iSleepyUITests.swift */; };
 		4EE5EF33265011E20013A502 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE5EF32265011E20013A502 /* DataLoader.swift */; };
 		4EE5EF36265012540013A502 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE5EF35265012540013A502 /* SwiftSoup */; };
-		4EEC736326C7108700AB861A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC736226C7108700AB861A /* ImageViewController.swift */; };
+		4EEC736326C7108700AB861A /* ImagePagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC736226C7108700AB861A /* ImagePagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		4E068AA0265081EE004AE291 /* CategoryLIstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLIstViewController.swift; sourceTree = "<group>"; };
 		4E068AA226508367004AE291 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		4E40AD3F26C8604800A162EB /* ImageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataSource.swift; sourceTree = "<group>"; };
+		4E8995DF26C9D01D00975D8F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		4EA5880D265BEAD90040EBC0 /* TitleLIstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleLIstViewController.swift; sourceTree = "<group>"; };
 		4EA5880F265BEB230040EBC0 /* TitleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleDataSource.swift; sourceTree = "<group>"; };
 		4EE5EEFF2650117B0013A502 /* iSleepy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSleepy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +63,7 @@
 		4EE5EF242650117D0013A502 /* iSleepyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSleepyUITests.swift; sourceTree = "<group>"; };
 		4EE5EF262650117D0013A502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EE5EF32265011E20013A502 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		4EEC736226C7108700AB861A /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		4EEC736226C7108700AB861A /* ImagePagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +168,9 @@
 		4EEC736126C70D4C00AB861A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4EEC736226C7108700AB861A /* ImageViewController.swift */,
+				4EEC736226C7108700AB861A /* ImagePagesViewController.swift */,
 				4E40AD3F26C8604800A162EB /* ImageDataSource.swift */,
+				4E8995DF26C9D01D00975D8F /* ImageViewController.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -310,7 +313,8 @@
 			files = (
 				4E40AD4026C8604800A162EB /* ImageDataSource.swift in Sources */,
 				4EE5EF33265011E20013A502 /* DataLoader.swift in Sources */,
-				4EEC736326C7108700AB861A /* ImageViewController.swift in Sources */,
+				4E8995E026C9D01D00975D8F /* ImageViewController.swift in Sources */,
+				4EEC736326C7108700AB861A /* ImagePagesViewController.swift in Sources */,
 				4E068AA326508367004AE291 /* CategoryDataSource.swift in Sources */,
 				4E068AA1265081EE004AE291 /* CategoryLIstViewController.swift in Sources */,
 				4EA5880E265BEAD90040EBC0 /* TitleLIstViewController.swift in Sources */,

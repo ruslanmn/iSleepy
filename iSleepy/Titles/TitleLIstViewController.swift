@@ -52,7 +52,7 @@ extension TitlesListViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Self.titleImagesSegue,
-           let dest = segue.destination as? ImageViewController,
+           let dest = segue.destination as? ImagePagesViewController,
            let cell = sender as? UITableViewCell,
            let index = tableView.indexPath(for: cell) {
             let title = titleDataSource.titles[index.row]

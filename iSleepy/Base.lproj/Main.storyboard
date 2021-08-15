@@ -76,7 +76,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="myX-Up-3mx" kind="show" identifier="TitleImagesSegue" id="Rq4-I0-Cz2"/>
+                                    <segue destination="KfA-RE-c87" kind="show" identifier="TitleImagesSegue" id="P2L-hO-Xx6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,34 +97,15 @@
             </objects>
             <point key="canvasLocation" x="921" y="61"/>
         </scene>
-        <!--Image View Controller-->
-        <scene sceneID="yzY-UO-s7d">
+        <!--Image Pages View Controller-->
+        <scene sceneID="VzG-5X-fwc">
             <objects>
-                <tableViewController id="myX-Up-3mx" customClass="ImageViewController" customModule="iSleepy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yCz-Ds-e8O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageListCell" id="Hch-GP-sY7">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hch-GP-sY7" id="OYu-Qz-aoH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="myX-Up-3mx" id="Ako-Mq-RkN"/>
-                            <outlet property="delegate" destination="myX-Up-3mx" id="eUr-Ua-84n"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="fKf-zE-eyI"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Vy-jC-cCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="KfA-RE-c87" customClass="ImagePagesViewController" customModule="iSleepy" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bpo-QN-ZRt"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQE-Kb-D6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1794" y="61"/>
+            <point key="canvasLocation" x="1938" y="61"/>
         </scene>
     </scenes>
     <resources>

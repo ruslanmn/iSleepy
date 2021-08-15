@@ -1,6 +1,8 @@
 import Foundation
 import SwiftSoup
 
+import UIKit
+
 class ImageDataSource {
     
     private var _images: [String]

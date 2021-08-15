@@ -2,39 +2,27 @@
 //  ImageViewController.swift
 //  iSleepy
 //
-//  Created by 19079884 on 13.08.2021.
+//  Created by 19079884 on 16.08.2021.
 //
 
+import Foundation
 import UIKit
 
-
-class ImageViewController: UITableViewController {
+class ImageViewController: UIViewController {
     
-    let imageDataSource: ImageDataSource = ImageDataSource()
+    public var index: Int!
     
-    public var titleOpt: TitleDataSource.Title?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let title = titleOpt {
-            imageDataSource.load(titleId: title.id)
+    public func createImageView(imageUrl: String, index: Int) {
+        self.index = index
+        let imageView = UIImageView()
+        view = imageView
+        let task = URLSession.shared.dataTask(with: URL(string: imageUrl)!) { data, response, error in
+            DispatchQueue.main.async {
+                if let imgData = data {
+                    imageView.image = UIImage(data: imgData)
+                }
+            }
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return imageDataSource.images.count
-    }
-    
-    // Provide a cell object for each row.
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Fetch a cell of the appropriate type.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageListCell", for: indexPath)
-       
-        // Configure the cell’s contents.
-        let imageUrl = URL(string: imageDataSource.images[indexPath.item])!
-        let imageData = try! Data(contentsOf: imageUrl)
-        cell.imageView!.image = UIImage(data: imageData)
-        
-       return cell
+        task.resume()
     }
 }
